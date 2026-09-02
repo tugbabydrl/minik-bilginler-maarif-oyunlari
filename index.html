@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Minik Bilginler - Maarif Dünyası Eğitici Oyun Platformu (3-6 Yaş)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#4D96FF">
+</head>
+<body>
+
+    <!-- Arka Plan Süslemeleri -->
+    <div class="bg-decorations">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
+    <!-- Konfeti Efekt Alanı -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Ana Uygulama Kapsayıcısı -->
+    <div class="app-container">
+        
+        <!-- ÜST GEZİNME VE KONTROL PANELİ -->
+        <header class="top-header">
+            <div class="header-left">
+                <div class="logo-wrap">
+                    <span class="logo-badge">🌈</span>
+                    <div class="logo-text">
+                        <h1>Minik Bilginler</h1>
+                        <span class="logo-sub">Maarif Modeli Macera Dünyası</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YAŞ GRUBU SEÇİCİ (3-4, 4-5, 5-6) -->
+            <div class="age-selector-wrap" title="Gelişim Seviyesi Seç">
+                <button class="age-pill-btn active" data-age="3-4">🐣 3-4 Yaş</button>
+                <button class="age-pill-btn" data-age="4-5">🦊 4-5 Yaş</button>
+                <button class="age-pill-btn" data-age="5-6">🚀 5-6 Yaş</button>
+            </div>
+
+            <!-- SAĞ KONTROLLER (YILDIZ, SES, EBEVEYN, ANA SAYFA) -->
+            <div class="header-right">
+                <div class="star-badge" title="Topladığın Yıldızlar">
+                    <span class="star-icon">⭐</span>
+                    <span id="starCounter">0</span>
+                </div>
+
+                <button class="nav-icon-btn" id="btnMute" title="Sesi Aç / Kapat">
+                    🔊 <span class="nav-label">Ses</span>
+                </button>
+
+                <button class="nav-icon-btn" id="btnParent" title="Öğretmen ve Ebeveyn Rapor Paneli">
+                    📊 <span class="nav-label">Ebeveyn</span>
+                </button>
+
+                <button class="nav-icon-btn btn-home hidden" id="btnHome" title="Ana Menüye Dön">
+                    🏠 <span class="nav-label">Menü</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- 1. HUB / OYUN SEÇİM EKRANI -->
+        <main id="hubView" class="animate-pop">
+            
+            <!-- Sevimli Maskot Karşılama Alanı -->
+            <section class="mascot-welcome-banner">
+                <div class="mascot-avatar-wrap" id="mascotPati" title="Benimle Konuşmak İçin Dokun!">
+                    <span class="mascot-avatar">🐱</span>
+                    <span class="mascot-tap-badge">Bana Dokun!</span>
+                </div>
+                <div class="mascot-speech-bubble">
+                    <p class="speech-text">
+                        "Merhaba minik kâşif! Ben Bilge Kedi Pati! Bugün hangi eğlenceli oyunu oynamak istersin?"
+                    </p>
+                </div>
+            </section>
+
+            <!-- 6 Temel Maarif Modeli Oyun Kartı -->
+            <section class="games-grid">
+                
+                <!-- Oyun 1: Şekil ve Renkler -->
+                <article class="game-hub-card card-shapes" data-game="shapesColors">
+                    <div class="card-icon-bubble">🎨</div>
+                    <div class="card-content">
+                        <h3>Şekil ve Renkler Bahçesi</h3>
+                        <p class="card-desc">Geometrik şekilleri ve rengarenk dünyayı keşfet!</p>
+                        <span class="maarif-tag">Bilişsel & Sanat</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 2: Sayı ve Sayma Ormanı -->
+                <article class="game-hub-card card-counting" data-game="counting">
+                    <div class="card-icon-bubble">🔢</div>
+                    <div class="card-content">
+                        <h3>Sayı ve Sayma Ormanı</h3>
+                        <p class="card-desc">Ağaçtaki sevimli meyveleri say ve sayıları öğren!</p>
+                        <span class="maarif-tag">Matematiksel Düşünme</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 3: Zıt & Mekânsal Kavramlar -->
+                <article class="game-hub-card card-concepts" data-game="concepts">
+                    <div class="card-icon-bubble">↔️</div>
+                    <div class="card-content">
+                        <h3>Zıt ve Mekân Kavramları</h3>
+                        <p class="card-desc">Büyük-küçük, sıcak-soğuk ve nerede olduğunu keşfet!</p>
+                        <span class="maarif-tag">Kavram & Dil Gelişimi</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 4: Doğa & Sıfır Atık Geri Dönüşüm -->
+                <article class="game-hub-card card-nature" data-game="nature">
+                    <div class="card-icon-bubble">🌿</div>
+                    <div class="card-content">
+                        <h3>Doğa & Sıfır Atık Kâşifi</h3>
+                        <p class="card-desc">Canlıların yuvalarını ve çevremizi korumayı öğren!</p>
+                        <span class="maarif-tag">Fen, Doğa & Çevre</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 5: Duygular ve Nezaket Atölyesi -->
+                <article class="game-hub-card card-emotions" data-game="emotions">
+                    <div class="card-icon-bubble">💖</div>
+                    <div class="card-content">
+                        <h3>Duygular & Değerler Kulübü</h3>
+                        <p class="card-desc">Duyguları tanıyalım, paylaşmayı ve nezaketi öğrenelim!</p>
+                        <span class="maarif-tag">Sosyo-Duygusal Gelişim</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 6: Sihirli Örüntü Treni -->
+                <article class="game-hub-card card-pattern" data-game="pattern">
+                    <div class="card-icon-bubble">🚂</div>
+                    <div class="card-content">
+                        <h3>Sihirli Örüntü Treni</h3>
+                        <p class="card-desc">Vagonlardaki sırayı takip et, eksik parçayı bul!</p>
+                        <span class="maarif-tag">Algoritmik & Mantık</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Akıl Zeka Oyunları Başlık -->
+                <div class="section-divider">
+                    <span class="section-divider-label">🧠 Akıl & Zeka Oyunları</span>
+                </div>
+
+                <!-- Oyun 7: Mangala -->
+                <article class="game-hub-card card-mangala" data-game="mangala">
+                    <div class="card-icon-bubble">🪨</div>
+                    <div class="card-content">
+                        <h3>Mangala - Taş Kale</h3>
+                        <p class="card-desc">Taşları doğru kalelere göndererek strateji kur!</p>
+                        <span class="maarif-tag">Stratejik Düşünme</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 8: Tangram -->
+                <article class="game-hub-card card-tangram" data-game="tangram">
+                    <div class="card-icon-bubble">🧩</div>
+                    <div class="card-content">
+                        <h3>Tangram - Şekil Ustası</h3>
+                        <p class="card-desc">Renkli parçaları doğru yere yerleştirerek şekil oluştur!</p>
+                        <span class="maarif-tag">Uzaysal Düşünme</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 9: Emoji Su Doku -->
+                <article class="game-hub-card card-sudoku" data-game="sudoku">
+                    <div class="card-icon-bubble">🧠</div>
+                    <div class="card-content">
+                        <h3>Emoji Su Doku</h3>
+                        <p class="card-desc">Her satır ve sütuna doğru emojiyi yerleştir!</p>
+                        <span class="maarif-tag">Mantıksal Çıkarım</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+                <!-- Oyun 10: Ünlü Harfler Kâşifi -->
+                <article class="game-hub-card card-vowels" data-game="vowels">
+                    <div class="card-icon-bubble">🔤</div>
+                    <div class="card-content">
+                        <h3>Ünlü Harfler Kâşifi</h3>
+                        <p class="card-desc">A, E, I, İ, O, Ö, U, Ü seslerini keşfet ve öğren!</p>
+                        <span class="maarif-tag">Erken Okuryazarlık</span>
+                        <button class="btn-play-card">Oyna 🚀</button>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        <!-- 2. AKTİF OYUN EKRANI -->
+        <main id="gameView" class="hidden">
+            <div id="gameContainer"></div>
+        </main>
+
+    </div>
+
+    <!-- MODAL KAPLAMA ALANI (EBEVEYN PANELİ, GÜVENLİK KİLİDİ, MOLA UYARISI) -->
+    <div id="modalContainer"></div>
+
+    <!-- SCRIPT DOSYALARI -->
+    <script src="js/audio.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/games/shapesColors.js"></script>
+    <script src="js/games/counting.js"></script>
+    <script src="js/games/concepts.js"></script>
+    <script src="js/games/nature.js"></script>
+    <script src="js/games/emotions.js"></script>
+    <script src="js/games/pattern.js"></script>
+    <script src="js/games/mangala.js"></script>
+    <script src="js/games/tangram.js"></script>
+    <script src="js/games/sudoku.js"></script>
+    <script src="js/games/vowels.js"></script>
+    <script src="js/parentDashboard.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
+
