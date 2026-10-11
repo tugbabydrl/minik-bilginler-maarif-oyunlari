@@ -2061,6 +2061,283 @@ body {
     border-bottom-width: 2px;
 }
 
+.card-coding { border-color: #C7D2FE; color: #6366F1; }
+
+/* 6. ROBOT ROLİ ERKEN KODLAMA (ALGORİTMA) STİLLERİ */
+.coding-main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.code-grid-wrapper {
+    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+    border: 4px solid #6366F1;
+    border-radius: var(--radius-xl);
+    padding: 14px;
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--code-cols, 4), minmax(54px, 68px));
+    gap: 8px;
+}
+
+.code-cell {
+    width: clamp(54px, 14vw, 68px);
+    height: clamp(54px, 14vw, 68px);
+    background: #FFFFFF;
+    border: 2px solid #C7D2FE;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    user-select: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.code-cell-obstacle {
+    background: #F1F5F9;
+    border-color: #94A3B8;
+}
+
+.code-cell-robot {
+    background: #FEF3C7 !important;
+    border: 3px solid #F59E0B !important;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+}
+
+.robot-avatar {
+    display: inline-block;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+}
+
+.code-cell-target {
+    background: #ECFDF5 !important;
+    border: 3px solid #10B981 !important;
+}
+
+.target-item {
+    display: inline-block;
+    filter: drop-shadow(0 4px 6px rgba(16, 185, 129, 0.3));
+}
+
+/* Algoritma Komut Kuyruğu */
+.code-queue-panel {
+    width: 100%;
+    background: #FFFFFF;
+    border: 3px solid #C7D2FE;
+    border-radius: var(--radius-lg);
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
+}
+
+.queue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.queue-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #3730A3;
+}
+
+.btn-clear-queue {
+    border: none;
+    background: #FEE2E2;
+    color: #991B1B;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-clear-queue:hover {
+    background: #FCA5A5;
+}
+
+.queue-items-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 52px;
+    padding: 6px;
+    background: #F8FAFC;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    border: 2px dashed #E2E8F0;
+}
+
+.queue-empty-text {
+    font-size: 0.9rem;
+    color: #64748B;
+    font-style: italic;
+    margin: auto;
+}
+
+.queue-item {
+    background: #EEF2FF;
+    border: 2px solid #818CF8;
+    border-radius: 12px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.queue-item:hover {
+    transform: scale(1.08);
+    background: #FEE2E2;
+    border-color: #EF4444;
+}
+
+.cmd-delete-hint {
+    display: none;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #EF4444;
+    color: white;
+    font-size: 0.65rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.queue-item:hover .cmd-delete-hint {
+    display: flex;
+}
+
+.queue-active {
+    background: #FEF3C7 !important;
+    border-color: #F59E0B !important;
+    transform: scale(1.15) !important;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+}
+
+.queue-done {
+    background: #DCFCE7 !important;
+    border-color: #22C55E !important;
+    opacity: 0.7;
+}
+
+.queue-error {
+    background: #FEE2E2 !important;
+    border-color: #EF4444 !important;
+    animation: shakeWrong 0.5s ease;
+}
+
+/* Komut Kontrol Paneli */
+.code-control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.code-add-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.btn-cmd {
+    background: #FFFFFF;
+    border: 3px solid #818CF8;
+    border-bottom: 5px solid #4F46E5;
+    border-radius: var(--radius-md);
+    padding: 10px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: all 0.15s ease;
+    min-width: 72px;
+}
+
+.btn-cmd small {
+    font-family: var(--font-main);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #3730A3;
+}
+
+.btn-cmd:hover {
+    transform: translateY(-3px);
+    background: #EEF2FF;
+}
+
+.btn-cmd:active {
+    transform: translateY(3px);
+    border-bottom-width: 2px;
+}
+
+.code-action-buttons {
+    width: 100%;
+    max-width: 380px;
+}
+
+.btn-run-code {
+    width: 100%;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-bottom: 5px solid #047857;
+    border-radius: 50px;
+    padding: 14px 24px;
+    font-family: var(--font-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+    transition: all 0.2s ease;
+}
+
+.btn-run-code:hover:not(.btn-disabled) {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-run-code:active:not(.btn-disabled) {
+    transform: translateY(3px);
+    border-bottom-width: 2px;
+}
+
+.btn-disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    filter: grayscale(0.4);
+}
+
 /* ==========================================================================
    YARDIMCI SINIFLAR & ANİMASYONLAR
    ========================================================================== */
@@ -2743,4 +3020,53 @@ body {
         padding: 12px 24px;
         border-bottom-width: 4px;
     }
+
+    /* Kodlama Oyunu Mobil */
+    .code-grid-wrapper {
+        padding: 8px;
+    }
+
+    .code-grid {
+        gap: 6px;
+    }
+
+    .code-cell {
+        width: clamp(44px, 12vw, 56px);
+        height: clamp(44px, 12vw, 56px);
+        font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+    }
+
+    .code-queue-panel {
+        padding: 10px 12px;
+    }
+
+    .queue-title {
+        font-size: 0.9rem;
+    }
+
+    .queue-item {
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+    }
+
+    .code-add-buttons {
+        gap: 8px;
+    }
+
+    .btn-cmd {
+        padding: 8px 12px;
+        min-width: 60px;
+        font-size: 1.5rem;
+    }
+
+    .btn-cmd small {
+        font-size: 0.72rem;
+    }
+
+    .btn-run-code {
+        font-size: 1.05rem;
+        padding: 12px 20px;
+    }
 }
+

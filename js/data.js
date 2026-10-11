@@ -689,6 +689,16 @@ window.MAARIF_DATA = {
         color: '#10B981',
         desc: 'Engelleri aş, yıldızları topla ve hedefine doğru yön bul!',
         maarifArea: 'Uzamsal Düşünme & Yön Kavramları'
+    },
+
+    // 12. ROBOT ROLİ ERKEN KODLAMA (ALGORİTMA)
+    coding: {
+        id: 'coding',
+        title: 'Robot Roli - Erken Kodlama',
+        icon: '🤖',
+        color: '#6366F1',
+        desc: 'Komutları sırayla diz, algoritmanı kur ve Roli\'yi hedefe ulaştır!',
+        maarifArea: 'Erken Kodlama & Algoritmik Düşünme'
     }
 };
 
@@ -748,6 +758,11 @@ window.MAARIF_OUTCOMES = {
         icon: '🌀',
         color: '#10B981',
         desc: 'Yönleri tanıma (yukarı, aşağı, sağa, sola), engelleri aşarak hedefe ulaşma ve mekânsal problem çözme.'
+    },
+    'Erken Kodlama & Algoritmik Düşünme': {
+        icon: '🤖',
+        color: '#6366F1',
+        desc: 'Adım adım komut dizilimi oluşturma, mantıksal sıralama, algoritmik yürütme ve hata ayıklama (debugging).'
     }
 };
 

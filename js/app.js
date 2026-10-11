@@ -160,6 +160,9 @@ class MaarifApp {
             case 'maze':
                 this.activeGame = new MazeGame(this.gameContainer, onGameComplete, onProgress);
                 break;
+            case 'coding':
+                this.activeGame = new CodingGame(this.gameContainer, onGameComplete, onProgress);
+                break;
             default:
                 console.error('Bilinmeyen oyun:', gameKey);
                 return;
