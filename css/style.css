@@ -2338,6 +2338,137 @@ body {
     filter: grayscale(0.4);
 }
 
+.card-memory { border-color: #FDE68A; color: #D97706; }
+
+/* 7. SEVİMLİ HAFIZA KARTLARI STİLLERİ */
+.memory-board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.memory-header-badges {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+
+.memory-badge {
+    background: #FFFBEB;
+    border: 2px solid #FCD34D;
+    color: #92400E;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.12);
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--mem-cols, 3), 1fr);
+    gap: 14px;
+    width: 100%;
+    max-width: 580px;
+    perspective: 1000px;
+}
+
+.memory-card-wrap {
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    perspective: 800px;
+    border-radius: var(--radius-lg);
+    touch-action: manipulation;
+}
+
+.memory-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.memory-card-wrap.is-flipped .memory-card-inner {
+    transform: rotateY(180deg);
+}
+
+.memory-card-front,
+.memory-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Kartın Kapalı Ön Yüzü */
+.memory-card-front {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border: 3.5px solid #F59E0B;
+    border-bottom: 6px solid #D97706;
+}
+
+.memory-card-back-icon {
+    font-size: clamp(2rem, 6vw, 3rem);
+    filter: drop-shadow(0 2px 4px rgba(217, 119, 6, 0.3));
+    animation: floatElement 3s infinite ease-in-out;
+}
+
+/* Kartın Açık Arka Yüzü */
+.memory-card-back {
+    background: #FFFFFF;
+    border: 3.5px solid #38BDF8;
+    border-bottom: 6px solid #0284C7;
+    transform: rotateY(180deg);
+    gap: 4px;
+    padding: 8px;
+}
+
+.memory-card-emoji {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+.memory-card-name {
+    font-family: var(--font-main);
+    font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+    font-weight: 700;
+    color: #0369A1;
+}
+
+/* Eşleşen Kart Efekti */
+.memory-card-wrap.is-matched .memory-card-inner {
+    border-color: #10B981;
+}
+
+.memory-card-wrap.is-matched .memory-card-back {
+    background: #ECFDF5;
+    border-color: #34D399;
+    border-bottom-color: #059669;
+    animation: matchCardPop 0.5s ease;
+}
+
+@keyframes matchCardPop {
+    0% { transform: rotateY(180deg) scale(0.9); }
+    50% { transform: rotateY(180deg) scale(1.1); }
+    100% { transform: rotateY(180deg) scale(1); }
+}
+
 /* ==========================================================================
    YARDIMCI SINIFLAR & ANİMASYONLAR
    ========================================================================== */
@@ -3068,5 +3199,39 @@ body {
         font-size: 1.05rem;
         padding: 12px 20px;
     }
+
+    /* Hafıza Kartları Mobil */
+    .memory-grid {
+        gap: 8px;
+    }
+
+    .memory-badge {
+        font-size: 0.88rem;
+        padding: 4px 14px;
+    }
+
+    .memory-card-front {
+        border-width: 2.5px;
+        border-bottom-width: 4px;
+    }
+
+    .memory-card-back {
+        border-width: 2.5px;
+        border-bottom-width: 4px;
+        padding: 4px;
+    }
+
+    .memory-card-back-icon {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
+    }
+
+    .memory-card-emoji {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+    }
+
+    .memory-card-name {
+        font-size: 0.72rem;
+    }
 }
+
 

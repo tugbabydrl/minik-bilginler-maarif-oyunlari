@@ -699,6 +699,16 @@ window.MAARIF_DATA = {
         color: '#6366F1',
         desc: 'Komutları sırayla diz, algoritmanı kur ve Roli\'yi hedefe ulaştır!',
         maarifArea: 'Erken Kodlama & Algoritmik Düşünme'
+    },
+
+    // 13. SEVİMLİ HAFIZA KARTLARI (KART EŞLEME)
+    memory: {
+        id: 'memory',
+        title: 'Sevimli Hafıza Kartları',
+        icon: '🃏',
+        color: '#F59E0B',
+        desc: 'Kartları çevir, aynı sevimli çiftleri aklında tut ve eşleştir!',
+        maarifArea: 'Görsel Hafıza & Odaklanma Becerileri'
     }
 };
 
@@ -763,6 +773,11 @@ window.MAARIF_OUTCOMES = {
         icon: '🤖',
         color: '#6366F1',
         desc: 'Adım adım komut dizilimi oluşturma, mantıksal sıralama, algoritmik yürütme ve hata ayıklama (debugging).'
+    },
+    'Görsel Hafıza & Odaklanma Becerileri': {
+        icon: '🃏',
+        color: '#F59E0B',
+        desc: 'Görsel çalışma belleğini güçlendirme, nesnelerin konumunu hatırlama, dikkat yoğunlaştırma ve eşleştirme.'
     }
 };
 
