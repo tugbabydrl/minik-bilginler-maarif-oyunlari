@@ -42,6 +42,8 @@
     padding: 0;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 body {
@@ -51,6 +53,8 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    overscroll-behavior-y: contain;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Arka Plan Neşeli Bulutlar ve Parıltılar */
@@ -2081,25 +2085,35 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE UYUM (MOBİL & TABLET)
+   RESPONSIVE UYUM (MOBİL TELEFON & TABLET OPTİMİZASYONU)
    ========================================================================== */
 @media (max-width: 768px) {
+    .app-container {
+        padding: 12px 14px 32px;
+    }
+
     .top-header {
         flex-direction: column;
         align-items: stretch;
-        gap: 14px;
+        gap: 12px;
+        padding: 12px 16px;
     }
 
     .header-left, .header-right {
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .age-selector-wrap {
         justify-content: center;
+        width: 100%;
     }
 
     .games-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .grid-4, .grid-3 {
@@ -2117,14 +2131,616 @@ body {
     .mascot-welcome-banner {
         flex-direction: column;
         text-align: center;
+        padding: 14px 18px;
     }
 
     .mascot-avatar-wrap {
         margin-right: 0;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
 
     .mascot-speech-bubble::before {
         display: none;
+    }
+
+    .game-play-area {
+        padding: 20px 16px;
+        min-height: auto;
+    }
+
+    .mangala-pits-row {
+        gap: 10px;
+    }
+
+    .mangala-pit {
+        width: calc(33.33% - 8px);
+        min-width: 95px;
+    }
+
+    .mangala-stores-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .mangala-store {
+        max-width: 100%;
+        min-width: auto;
+    }
+}
+
+/* AKILLI TELEFONLAR (320px - 480px) İÇİN ÖZEL ULTRA MOBİL UYUM */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 8px 10px 24px;
+    }
+
+    /* Üst Başlık & Butonlar */
+    .top-header {
+        padding: 10px 12px;
+        margin-bottom: 14px;
+        gap: 10px;
+        border-radius: var(--radius-lg);
+    }
+
+    .logo-badge {
+        font-size: 1.8rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.15rem;
+    }
+
+    .logo-sub {
+        font-size: 0.7rem;
+    }
+
+    .age-selector-wrap {
+        padding: 4px;
+        gap: 4px;
+    }
+
+    .age-pill-btn {
+        padding: 6px 12px;
+        font-size: 0.82rem;
+        flex: 1;
+        text-align: center;
+    }
+
+    .star-badge {
+        padding: 6px 12px;
+        font-size: 1rem;
+    }
+
+    .star-icon {
+        font-size: 1.1rem;
+    }
+
+    .nav-icon-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .nav-icon-btn .nav-label {
+        display: none;
+    }
+
+    /* Sevimli Maskot */
+    .mascot-welcome-banner {
+        padding: 12px 14px;
+        margin-bottom: 16px;
+        border-radius: var(--radius-lg);
+    }
+
+    .mascot-avatar {
+        font-size: 2.8rem;
+    }
+
+    .mascot-tap-badge {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+
+    .mascot-speech-bubble {
+        padding: 10px 14px;
+        border-radius: var(--radius-md);
+    }
+
+    .speech-text {
+        font-size: 0.95rem;
+        line-height: 1.35;
+    }
+
+    /* Oyun Seçim Kartları */
+    .section-divider-label {
+        font-size: 1.05rem;
+        padding: 6px 18px;
+    }
+
+    .game-hub-card {
+        padding: 16px 14px;
+        border-radius: var(--radius-lg);
+    }
+
+    .card-icon-bubble {
+        width: 70px;
+        height: 70px;
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-desc {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+
+    .btn-play-card {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+
+    /* Oyun Oynama Alanı & Soru Başlığı */
+    .game-play-area {
+        padding: 14px 10px;
+        border-radius: var(--radius-lg);
+        border-width: 3px;
+    }
+
+    .question-banner {
+        padding: 10px 12px;
+        gap: 10px;
+        margin-bottom: 16px;
+        border-radius: var(--radius-lg);
+    }
+
+    .audio-replay-btn {
+        width: 46px;
+        height: 46px;
+        font-size: 1.4rem;
+        border-bottom-width: 3px;
+    }
+
+    .question-text {
+        font-size: 1.05rem;
+        line-height: 1.35;
+    }
+
+    .target-basket {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+
+    .basket-icon {
+        font-size: 1.4rem;
+    }
+
+    /* Seçenekler Izgarası */
+    .options-grid {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .grid-4, .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-card-option {
+        padding: 12px 6px;
+        border-radius: var(--radius-md);
+        border-bottom-width: 4px;
+        gap: 8px;
+    }
+
+    .option-visual {
+        width: 64px;
+        height: 64px;
+    }
+
+    .option-emoji {
+        font-size: 2.5rem;
+    }
+
+    .option-name {
+        font-size: 0.92rem;
+    }
+
+    /* Sayma Oyunu Mobil */
+    .nature-tree-scene {
+        padding: 12px 10px;
+        min-height: 120px;
+    }
+
+    .countable-items-container {
+        gap: 12px;
+    }
+
+    .count-emoji {
+        font-size: 2.4rem;
+    }
+
+    .number-options-row {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .number-btn {
+        width: 62px;
+        height: 62px;
+        font-size: 1.9rem;
+        border-bottom-width: 4px;
+    }
+
+    /* Zıt Kavramlar Mobil */
+    .concepts-comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .concept-card {
+        padding: 16px 12px;
+        border-radius: var(--radius-lg);
+        gap: 10px;
+    }
+
+    .concept-emoji-box {
+        width: 80px;
+        height: 80px;
+    }
+
+    .concept-emoji {
+        font-size: 3.2rem;
+    }
+
+    .concept-title {
+        font-size: 1.1rem;
+    }
+
+    /* Doğa & Geri Dönüşüm Mobil */
+    .nature-subject-badge {
+        padding: 10px 18px;
+        gap: 10px;
+    }
+
+    .subject-emoji {
+        font-size: 2.4rem;
+    }
+
+    .subject-name {
+        font-size: 1.15rem;
+    }
+
+    .scenario-box {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+
+    /* Örüntü Treni Mobil */
+    .train-track-container {
+        padding: 14px 10px;
+        margin-bottom: 18px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .train-engine {
+        font-size: 2.8rem;
+    }
+
+    .wagon {
+        width: 60px;
+        height: 60px;
+        padding: 4px 2px;
+    }
+
+    .wagon-cargo {
+        font-size: 1.7rem;
+    }
+
+    .pattern-options-title {
+        font-size: 1rem;
+    }
+
+    .pattern-options-row {
+        gap: 10px;
+    }
+
+    .pattern-choice-btn {
+        width: 60px;
+        height: 60px;
+        border-bottom-width: 4px;
+    }
+
+    .choice-emoji {
+        font-size: 2.2rem;
+    }
+
+    /* Mangala Mobil */
+    .mangala-section-title {
+        font-size: 0.92rem;
+        padding: 6px 14px;
+    }
+
+    .mangala-pits-row {
+        gap: 8px;
+    }
+
+    .mangala-pit {
+        width: calc(33.33% - 6px);
+        min-width: 85px;
+        min-height: 80px;
+        padding: 8px 6px;
+        border-bottom-width: 4px;
+    }
+
+    .pit-bowl {
+        min-height: 42px;
+        gap: 4px;
+    }
+
+    .mangala-stone {
+        font-size: 1.5rem;
+    }
+
+    .pit-count {
+        font-size: 0.78rem;
+        padding: 2px 6px;
+    }
+
+    .mangala-stores-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mangala-store {
+        padding: 10px 14px;
+        border-radius: var(--radius-lg);
+    }
+
+    .store-label {
+        font-size: 1rem;
+    }
+
+    .store-count {
+        font-size: 1.25rem;
+    }
+
+    /* Tangram Mobil */
+    .tangram-target-label {
+        font-size: 1.15rem;
+        padding: 8px 16px;
+    }
+
+    .tangram-slots-area {
+        gap: 8px;
+    }
+
+    .tangram-slot {
+        width: calc(33.33% - 6px);
+        min-width: 85px;
+        height: 105px;
+        padding: 8px 4px;
+    }
+
+    .slot-shape-preview {
+        font-size: 1.8rem;
+    }
+
+    .slot-label {
+        font-size: 0.85rem;
+    }
+
+    .slot-hint {
+        display: none;
+    }
+
+    .tangram-instruction-text {
+        font-size: 0.88rem;
+        padding: 6px 12px;
+    }
+
+    .tangram-pieces-area {
+        padding: 12px;
+    }
+
+    .tangram-pieces-row {
+        gap: 8px;
+    }
+
+    .tangram-piece {
+        padding: 8px 12px;
+    }
+
+    .piece-emoji {
+        font-size: 1.8rem;
+    }
+
+    .piece-name {
+        font-size: 0.78rem;
+    }
+
+    /* Sudoku Mobil */
+    .sudoku-grid-wrapper {
+        padding: 10px;
+        border-radius: var(--radius-lg);
+    }
+
+    .sudoku-grid {
+        width: min(280px, 86vw);
+        height: min(280px, 86vw);
+        gap: 6px;
+    }
+
+    .sudoku-cell {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+        border-radius: 8px;
+        border-width: 2px;
+    }
+
+    .sudoku-emoji-pad {
+        padding: 10px 12px;
+    }
+
+    .pad-title {
+        font-size: 0.88rem;
+    }
+
+    .emoji-pad-row {
+        gap: 8px;
+    }
+
+    .sudoku-emoji-btn {
+        padding: 6px 10px;
+        font-size: 1.8rem;
+        border-bottom-width: 3px;
+    }
+
+    .emoji-btn-name {
+        font-size: 0.7rem;
+    }
+
+    /* Ünlü Harfler Mobil */
+    .vowel-target-card {
+        padding: 10px 20px;
+        gap: 12px;
+        border-radius: var(--radius-lg);
+    }
+
+    .vowel-big-emoji {
+        font-size: 2.8rem;
+    }
+
+    .vowel-target-word {
+        font-size: 1.6rem;
+    }
+
+    .vowel-sound-play-btn {
+        font-size: 1rem;
+        padding: 8px 18px;
+    }
+
+    .vowels-options-grid {
+        gap: 10px;
+    }
+
+    .vowel-letter-btn {
+        width: 68px;
+        height: 68px;
+        border-bottom-width: 5px;
+        border-radius: var(--radius-lg);
+    }
+
+    .vowel-letter {
+        font-size: 2.2rem;
+    }
+
+    /* Labirent Mobil */
+    .maze-header-badges {
+        gap: 8px;
+    }
+
+    .maze-badge {
+        font-size: 0.85rem;
+        padding: 4px 12px;
+    }
+
+    .maze-grid-wrapper {
+        padding: 8px;
+        border-radius: var(--radius-lg);
+    }
+
+    .maze-grid {
+        gap: 4px;
+    }
+
+    .maze-cell {
+        width: clamp(34px, 11vw, 46px);
+        height: clamp(34px, 11vw, 46px);
+        border-radius: 8px;
+        font-size: clamp(1.4rem, 4.5vw, 1.9rem);
+    }
+
+    .maze-wall-icon {
+        font-size: clamp(1.2rem, 3.8vw, 1.6rem);
+    }
+
+    .maze-hint-text {
+        font-size: 0.82rem;
+    }
+
+    .maze-dpad {
+        gap: 6px;
+        margin-top: 4px;
+    }
+
+    .dpad-row {
+        gap: 10px;
+    }
+
+    .dpad-center {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .dpad-btn {
+        width: 58px;
+        height: 58px;
+        font-size: 1.7rem;
+        border-radius: 16px;
+        border-bottom-width: 4px;
+    }
+
+    /* Modallar & Tebrik Kartları */
+    .parent-dashboard-card {
+        padding: 16px 12px;
+        max-height: 94vh;
+        gap: 14px;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .parent-gate-card, .break-time-card {
+        padding: 20px 14px;
+        width: 95%;
+        border-radius: var(--radius-lg);
+    }
+
+    .gate-math-problem {
+        font-size: 1.9rem;
+        padding: 8px 18px;
+    }
+
+    .game-complete-card {
+        padding: 24px 16px;
+        width: 95%;
+        border-radius: var(--radius-lg);
+    }
+
+    .trophy-icon {
+        font-size: 3.5rem;
+    }
+
+    .game-complete-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .game-complete-card p {
+        font-size: 0.95rem;
+    }
+
+    .earned-stars {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+
+    .btn-primary-large {
+        font-size: 1.05rem;
+        padding: 12px 24px;
+        border-bottom-width: 4px;
     }
 }

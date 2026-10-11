@@ -19,10 +19,30 @@ class SoundManager {
         if (AudioCtx) {
             this.ctx = new AudioCtx();
         }
+
+        // Mobil cihazlarda (iOS Safari / Android) ilk dokunuşta ses motorunun kilidini açma
+        const unlockMobileAudio = () => {
+            this.resumeAudio();
+            // iOS için sessiz buffer çalma
+            if (this.ctx && this.ctx.state === 'running') {
+                const buffer = this.ctx.createBuffer(1, 1, 22050);
+                const source = this.ctx.createBufferSource();
+                source.buffer = buffer;
+                source.connect(this.ctx.destination);
+                source.start(0);
+            }
+            document.removeEventListener('touchstart', unlockMobileAudio);
+            document.removeEventListener('touchend', unlockMobileAudio);
+            document.removeEventListener('click', unlockMobileAudio);
+        };
+
+        document.addEventListener('touchstart', unlockMobileAudio, { passive: true });
+        document.addEventListener('touchend', unlockMobileAudio, { passive: true });
+        document.addEventListener('click', unlockMobileAudio);
     }
 
     resumeAudio() {
-        if (this.ctx && this.ctx.state === 'suspended') {
+        if (this.ctx && (this.ctx.state === 'suspended' || this.ctx.state === 'interrupted')) {
             this.ctx.resume();
         }
     }
