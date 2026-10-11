@@ -679,6 +679,16 @@ window.MAARIF_DATA = {
                 }
             ]
         }
+    },
+
+    // 11. LABİRENT KÂŞİFİ
+    maze: {
+        id: 'maze',
+        title: 'Labirent Kâşifi',
+        icon: '🌀',
+        color: '#10B981',
+        desc: 'Engelleri aş, yıldızları topla ve hedefine doğru yön bul!',
+        maarifArea: 'Uzamsal Düşünme & Yön Kavramları'
     }
 };
 
@@ -733,6 +743,11 @@ window.MAARIF_OUTCOMES = {
         icon: '🔤',
         color: '#EC4899',
         desc: 'Ünlü sesleri (a, e, ı, i, o, ö, u, ü) işitsel ve görsel olarak ayırt etme, ses-harf farkındalığı kazanma.'
+    },
+    'Uzamsal Düşünme & Yön Kavramları': {
+        icon: '🌀',
+        color: '#10B981',
+        desc: 'Yönleri tanıma (yukarı, aşağı, sağa, sola), engelleri aşarak hedefe ulaşma ve mekânsal problem çözme.'
     }
 };
 

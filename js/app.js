@@ -157,6 +157,9 @@ class MaarifApp {
             case 'vowels':
                 this.activeGame = new VowelsGame(this.gameContainer, onGameComplete, onProgress);
                 break;
+            case 'maze':
+                this.activeGame = new MazeGame(this.gameContainer, onGameComplete, onProgress);
+                break;
             default:
                 console.error('Bilinmeyen oyun:', gameKey);
                 return;
