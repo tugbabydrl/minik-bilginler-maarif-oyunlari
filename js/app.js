@@ -166,6 +166,9 @@ class MaarifApp {
             case 'memory':
                 this.activeGame = new MemoryGame(this.gameContainer, onGameComplete, onProgress);
                 break;
+            case 'copyModel':
+                this.activeGame = new CopyModelGame(this.gameContainer, onGameComplete, onProgress);
+                break;
             default:
                 console.error('Bilinmeyen oyun:', gameKey);
                 return;

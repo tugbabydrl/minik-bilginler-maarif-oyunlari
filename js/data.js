@@ -709,6 +709,16 @@ window.MAARIF_DATA = {
         color: '#F59E0B',
         desc: 'Kartları çevir, aynı sevimli çiftleri aklında tut ve eşleştir!',
         maarifArea: 'Görsel Hafıza & Odaklanma Becerileri'
+    },
+
+    // 14. AYNISINI YAP (MODEL KOPYALAMA)
+    copyModel: {
+        id: 'copyModel',
+        title: 'Aynısını Yap',
+        icon: '🪞',
+        color: '#EC4899',
+        desc: 'Örnek modeldeki renk ve şekillerin aynısını kendi tablona oluştur!',
+        maarifArea: 'Görsel-Uzamsal Algı & Model Kopyalama'
     }
 };
 
@@ -778,5 +788,10 @@ window.MAARIF_OUTCOMES = {
         icon: '🃏',
         color: '#F59E0B',
         desc: 'Görsel çalışma belleğini güçlendirme, nesnelerin konumunu hatırlama, dikkat yoğunlaştırma ve eşleştirme.'
+    },
+    'Görsel-Uzamsal Algı & Model Kopyalama': {
+        icon: '🪞',
+        color: '#EC4899',
+        desc: 'Görsel modelleri inceleme, uzamsal konum ilişkilerini kavrama, desen kopyalama ve el-göz koordinasyonu.'
     }
 };

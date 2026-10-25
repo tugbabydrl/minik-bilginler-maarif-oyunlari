@@ -2469,6 +2469,277 @@ body {
     100% { transform: rotateY(180deg) scale(1); }
 }
 
+.card-copymodel { border-color: #FBCFE8; color: #DB2777; }
+
+/* 8. AYNISINI YAP (MODEL KOPYALAMA) STİLLERİ */
+.copy-model-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.copy-boards-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.copy-board-box {
+    background: #FFFFFF;
+    border: 3px solid;
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.model-box {
+    border-color: #F472B6;
+    background: #FDF2F8;
+}
+
+.player-box {
+    border-color: #EC4899;
+    background: #FFFFFF;
+}
+
+.board-badge {
+    font-size: 0.92rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.model-badge {
+    background: #FCE7F3;
+    color: #BE185D;
+}
+
+.player-badge {
+    background: #FDF2F8;
+    color: #DB2777;
+    border: 1.5px solid #FBCFE8;
+}
+
+.copy-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--copy-cols, 3), 1fr);
+    gap: 10px;
+    padding: 4px;
+}
+
+.copy-cell {
+    width: clamp(52px, 12vw, 74px);
+    height: clamp(52px, 12vw, 74px);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.copy-cell-model {
+    background: #FFFFFF;
+    border: 2.5px solid #FBCFE8;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.08);
+    pointer-events: none;
+}
+
+.copy-cell-player {
+    background: #FFFFFF;
+    border: 2.5px dashed #CBD5E1;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.copy-cell-player.cell-empty {
+    color: #CBD5E1;
+    font-size: 1.25rem;
+}
+
+.copy-cell-player.cell-filled {
+    border-style: solid;
+    border-color: #EC4899;
+    background: #FFF7ED;
+    box-shadow: 0 4px 10px rgba(236, 72, 153, 0.12);
+}
+
+.copy-cell-player:hover {
+    transform: scale(1.05);
+    border-color: #DB2777;
+}
+
+.copy-cell-player:active {
+    transform: scale(0.95);
+}
+
+.copy-indicator-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.2rem;
+    color: #EC4899;
+    font-weight: 700;
+    gap: 4px;
+    animation: gentleWiggle 2.5s infinite ease-in-out;
+}
+
+.copy-indicator-arrow small {
+    font-size: 0.76rem;
+    color: #BE185D;
+    background: #FCE7F3;
+    padding: 2px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.copy-hint-text {
+    font-size: 0.92rem;
+    color: #64748B;
+    text-align: center;
+    max-width: 520px;
+    line-height: 1.4;
+}
+
+.copy-palette-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 560px;
+    background: #FFFFFF;
+    border: 2.5px solid #FBCFE8;
+    border-radius: var(--radius-lg);
+    padding: 12px 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.palette-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #9D174D;
+}
+
+.copy-palette-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.copy-palette-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 2.5px solid #E2E8F0;
+    border-bottom: 4px solid #CBD5E1;
+    border-radius: var(--radius-md);
+    padding: 8px 12px;
+    min-width: 64px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+}
+
+.copy-palette-btn .palette-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.copy-palette-btn .palette-name {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #475569;
+    margin-top: 4px;
+}
+
+.copy-palette-btn:hover {
+    transform: translateY(-2px);
+    border-color: #EC4899;
+}
+
+.copy-palette-btn.palette-active {
+    border-color: #EC4899;
+    border-bottom-color: #BE185D;
+    background: #FDF2F8;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(236, 72, 153, 0.22);
+}
+
+.copy-palette-btn.palette-active .palette-name {
+    color: #BE185D;
+}
+
+.copy-eraser-btn {
+    border-color: #FED7AA;
+    border-bottom-color: #FDBA74;
+}
+
+.copy-eraser-btn.palette-active {
+    border-color: #F97316;
+    border-bottom-color: #EA580C;
+    background: #FFF7ED;
+    box-shadow: 0 6px 16px rgba(249, 115, 22, 0.22);
+}
+
+.copy-action-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.btn-check-model {
+    background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+    border: none;
+    border-bottom: 5px solid #BE185D;
+    color: #FFFFFF;
+    font-size: 1.15rem;
+    font-weight: 800;
+    padding: 13px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(236, 72, 153, 0.3);
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+}
+
+.btn-check-model:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(236, 72, 153, 0.4);
+}
+
+.btn-check-model:active {
+    transform: translateY(2px);
+    border-bottom-width: 2px;
+}
+
+.board-success-glow {
+    border-color: #10B981 !important;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.4) !important;
+    animation: popIn 0.4s ease;
+}
+
 /* ==========================================================================
    YARDIMCI SINIFLAR & ANİMASYONLAR
    ========================================================================== */
@@ -3232,6 +3503,44 @@ body {
     .memory-card-name {
         font-size: 0.72rem;
     }
+
+    /* Aynısını Yap Mobil */
+    .copy-boards-wrapper {
+        gap: 12px;
+    }
+
+    .copy-board-box {
+        padding: 10px;
+    }
+
+    .copy-indicator-arrow {
+        font-size: 1.6rem;
+    }
+
+    .copy-cell {
+        width: clamp(42px, 11vw, 56px);
+        height: clamp(42px, 11vw, 56px);
+        font-size: clamp(1.4rem, 4.5vw, 2.1rem);
+    }
+
+    .copy-palette-btn {
+        padding: 6px 10px;
+        min-width: 54px;
+    }
+
+    .copy-palette-btn .palette-icon {
+        font-size: 1.5rem;
+    }
+
+    .copy-palette-btn .palette-name {
+        font-size: 0.7rem;
+    }
+
+    .btn-check-model {
+        font-size: 1rem;
+        padding: 12px 22px;
+    }
 }
+
 
 
