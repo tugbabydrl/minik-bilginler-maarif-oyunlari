@@ -380,7 +380,7 @@ class MazeGame {
         }
 
         window.soundManager.playCelebration();
-        window.soundManager.speak(`Harikasın! ${this.currentLevel.character} ${this.currentLevel.targetName} hedefine ulaştı!`, true);
+        window.soundManager.speak(`Harikasın! ${this.currentLevel.targetName} hedefine başarıyla ulaştın!`, true);
 
         if (window.app) {
             window.app.triggerConfetti(50);

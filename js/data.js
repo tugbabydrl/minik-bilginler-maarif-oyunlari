@@ -1,76 +1,76 @@
 // Maarif Modeli Okul Öncesi Eğitim Veritabanı (3-6 Yaş Kademelerine Göre Yapılandırılmış)
 
 window.MAARIF_DATA = {
-    // 1. SEKIL VE RENKLER BAHCESI
+    // 1. ŞEKİL VE RENKLER BAHÇESİ
     shapesColors: {
         id: 'shapesColors',
-        title: 'Sekil ve Renkler Bahcesi',
+        title: 'Şekil ve Renkler Bahçesi',
         icon: '🎨',
         color: '#FF6B6B',
-        desc: 'Geometrik sekilleri ve rengarenk dunyayi kesfet!',
-        maarifArea: 'Bilissel & Sanatsal Beceriler',
+        desc: 'Geometrik şekilleri ve rengârenk dünyayı keşfet!',
+        maarifArea: 'Bilişsel & Sanatsal Beceriler',
         levels: {
             '3-4': [
                 {
                     type: 'shape_find',
-                    instruction: 'Mavi Daireyi bulup sepete tikla!',
+                    instruction: 'Mavi daireyi bulup sepete dokun!',
                     targetShape: 'circle',
                     targetColor: '#4D96FF',
                     targetName: 'Mavi Daire',
                     options: [
                         { id: 1, shape: 'circle', color: '#4D96FF', name: 'Mavi Daire', isCorrect: true, emoji: '🔵' },
-                        { id: 2, shape: 'square', color: '#FFD93D', name: 'Sari Kare', isCorrect: false, emoji: '🟨' },
-                        { id: 3, shape: 'triangle', color: '#FF6B6B', name: 'Kirmizi Ucgen', isCorrect: false, emoji: '🔺' }
+                        { id: 2, shape: 'square', color: '#FFD93D', name: 'Sarı Kare', isCorrect: false, emoji: '🟨' },
+                        { id: 3, shape: 'triangle', color: '#FF6B6B', name: 'Kırmızı Üçgen', isCorrect: false, emoji: '🔺' }
                     ]
                 },
                 {
                     type: 'color_find',
-                    instruction: 'Kirmizi rengi bul ve dokun!',
-                    targetColorName: 'Kirmizi',
+                    instruction: 'Kırmızı rengi bul ve dokun!',
+                    targetColorName: 'Kırmızı',
                     options: [
-                        { id: 1, color: '#FF6B6B', name: 'Kirmizi Elma', emoji: '🍎', isCorrect: true },
-                        { id: 2, color: '#6BCB77', name: 'Yesil Kurbaga', emoji: '🐸', isCorrect: false },
+                        { id: 1, color: '#FF6B6B', name: 'Kırmızı Elma', emoji: '🍎', isCorrect: true },
+                        { id: 2, color: '#6BCB77', name: 'Yeşil Kurbağa', emoji: '🐸', isCorrect: false },
                         { id: 3, color: '#4D96FF', name: 'Mavi Kelebek', emoji: '🦋', isCorrect: false }
                     ]
                 },
                 {
                     type: 'shape_find',
-                    instruction: 'Sari Kareyi sec!',
+                    instruction: 'Sarı kareyi seç!',
                     targetShape: 'square',
                     targetColor: '#FFD93D',
-                    targetName: 'Sari Kare',
+                    targetName: 'Sarı Kare',
                     options: [
-                        { id: 1, shape: 'square', color: '#FFD93D', name: 'Sari Kare', isCorrect: true, emoji: '🟨' },
-                        { id: 2, shape: 'circle', color: '#FF6B6B', name: 'Kirmizi Daire', isCorrect: false, emoji: '🔴' },
-                        { id: 3, shape: 'triangle', color: '#6BCB77', name: 'Yesil Ucgen', isCorrect: false, emoji: '🟢' }
+                        { id: 1, shape: 'square', color: '#FFD93D', name: 'Sarı Kare', isCorrect: true, emoji: '🟨' },
+                        { id: 2, shape: 'circle', color: '#FF6B6B', name: 'Kırmızı Daire', isCorrect: false, emoji: '🔴' },
+                        { id: 3, shape: 'triangle', color: '#6BCB77', name: 'Yeşil Üçgen', isCorrect: false, emoji: '🟢' }
                     ]
                 }
             ],
             '4-5': [
                 {
                     type: 'shape_find',
-                    instruction: 'Yesil Ucgeni bul ve sepete koy!',
+                    instruction: 'Yeşil üçgeni bul ve sepete koy!',
                     targetShape: 'triangle',
                     targetColor: '#6BCB77',
-                    targetName: 'Yesil Ucgen',
+                    targetName: 'Yeşil Üçgen',
                     options: [
-                        { id: 1, shape: 'triangle', color: '#6BCB77', name: 'Yesil Ucgen', isCorrect: true, emoji: '🔺' },
-                        { id: 2, shape: 'rect', color: '#FF9F45', name: 'Turuncu Dikdortgen', isCorrect: false, emoji: '🟧' },
+                        { id: 1, shape: 'triangle', color: '#6BCB77', name: 'Yeşil Üçgen', isCorrect: true, emoji: '🔺' },
+                        { id: 2, shape: 'rect', color: '#FF9F45', name: 'Turuncu Dikdörtgen', isCorrect: false, emoji: '🟧' },
                         { id: 3, shape: 'circle', color: '#9B51E0', name: 'Mor Daire', isCorrect: false, emoji: '🟣' },
                         { id: 4, shape: 'square', color: '#4D96FF', name: 'Mavi Kare', isCorrect: false, emoji: '🟦' }
                     ]
                 },
                 {
                     type: 'shape_find',
-                    instruction: 'Turuncu Dikdortgeni bul!',
+                    instruction: 'Turuncu dikdörtgeni bul!',
                     targetShape: 'rect',
                     targetColor: '#FF9F45',
-                    targetName: 'Turuncu Dikdortgen',
+                    targetName: 'Turuncu Dikdörtgen',
                     options: [
-                        { id: 1, shape: 'rect', color: '#FF9F45', name: 'Turuncu Dikdortgen', isCorrect: true, emoji: '🟧' },
-                        { id: 2, shape: 'circle', color: '#FF6B6B', name: 'Kirmizi Daire', isCorrect: false, emoji: '🔴' },
-                        { id: 3, shape: 'star', color: '#FFD93D', name: 'Sari Yildiz', isCorrect: false, emoji: '⭐' },
-                        { id: 4, shape: 'square', color: '#6BCB77', name: 'Yesil Kare', isCorrect: false, emoji: '🟩' }
+                        { id: 1, shape: 'rect', color: '#FF9F45', name: 'Turuncu Dikdörtgen', isCorrect: true, emoji: '🟧' },
+                        { id: 2, shape: 'circle', color: '#FF6B6B', name: 'Kırmızı Daire', isCorrect: false, emoji: '🔴' },
+                        { id: 3, shape: 'star', color: '#FFD93D', name: 'Sarı Yıldız', isCorrect: false, emoji: '⭐' },
+                        { id: 4, shape: 'square', color: '#6BCB77', name: 'Yeşil Kare', isCorrect: false, emoji: '🟩' }
                     ]
                 },
                 {
@@ -78,41 +78,41 @@ window.MAARIF_DATA = {
                     instruction: 'Mor rengi bul!',
                     targetColorName: 'Mor',
                     options: [
-                        { id: 1, color: '#9B51E0', name: 'Mor Uzum', emoji: '🍇', isCorrect: true },
-                        { id: 2, color: '#FFD93D', name: 'Sari Muz', emoji: '🍌', isCorrect: false },
+                        { id: 1, color: '#9B51E0', name: 'Mor Üzüm', emoji: '🍇', isCorrect: true },
+                        { id: 2, color: '#FFD93D', name: 'Sarı Muz', emoji: '🍌', isCorrect: false },
                         { id: 3, color: '#FF9F45', name: 'Turuncu Portakal', emoji: '🍊', isCorrect: false },
-                        { id: 4, color: '#FF6B6B', name: 'Kirmizi Cilek', emoji: '🍓', isCorrect: false }
+                        { id: 4, color: '#FF6B6B', name: 'Kırmızı Çilek', emoji: '🍓', isCorrect: false }
                     ]
                 }
             ],
             '5-6': [
                 {
                     type: 'shape_find',
-                    instruction: 'Parlayan Sari Yildizi bul!',
+                    instruction: 'Parlayan sarı yıldızı bul!',
                     targetShape: 'star',
                     targetColor: '#FFD93D',
-                    targetName: 'Sari Yildiz',
+                    targetName: 'Sarı Yıldız',
                     options: [
-                        { id: 1, shape: 'star', color: '#FFD93D', name: 'Sari Yildiz', isCorrect: true, emoji: '⭐' },
-                        { id: 2, shape: 'oval', color: '#FF6B6B', name: 'Kirmizi Oval', isCorrect: false, emoji: '🥚' },
-                        { id: 3, shape: 'rect', color: '#4D96FF', name: 'Mavi Dikdortgen', isCorrect: false, emoji: '📘' },
-                        { id: 4, shape: 'triangle', color: '#6BCB77', name: 'Yesil Ucgen', isCorrect: false, emoji: '🌲' }
+                        { id: 1, shape: 'star', color: '#FFD93D', name: 'Sarı Yıldız', isCorrect: true, emoji: '⭐' },
+                        { id: 2, shape: 'oval', color: '#FF6B6B', name: 'Kırmızı Oval', isCorrect: false, emoji: '🥚' },
+                        { id: 3, shape: 'rect', color: '#4D96FF', name: 'Mavi Dikdörtgen', isCorrect: false, emoji: '📘' },
+                        { id: 4, shape: 'triangle', color: '#6BCB77', name: 'Yeşil Üçgen', isCorrect: false, emoji: '🌲' }
                     ]
                 },
                 {
                     type: 'shape_find',
-                    instruction: 'Hangi nesne Daire seklindedir?',
+                    instruction: 'Hangi nesne daire şeklindedir?',
                     targetShape: 'circle',
                     options: [
                         { id: 1, name: 'Saat', emoji: '⏰', shapeType: 'circle', isCorrect: true },
-                        { id: 2, name: 'Kapi', emoji: '🚪', shapeType: 'rect', isCorrect: false },
+                        { id: 2, name: 'Kapı', emoji: '🚪', shapeType: 'rect', isCorrect: false },
                         { id: 3, name: 'Kitap', emoji: '📖', shapeType: 'rect', isCorrect: false },
                         { id: 4, name: 'Piramit', emoji: '📐', shapeType: 'triangle', isCorrect: false }
                     ]
                 },
                 {
                     type: 'shape_find',
-                    instruction: 'Hangi nesne Ucgen seklindedir?',
+                    instruction: 'Hangi nesne üçgen şeklindedir?',
                     targetShape: 'triangle',
                     options: [
                         { id: 1, name: 'Pizza Dilimi', emoji: '🍕', shapeType: 'triangle', isCorrect: true },
@@ -128,157 +128,157 @@ window.MAARIF_DATA = {
     // 2. SAYI VE SAYMA ORMANI
     counting: {
         id: 'counting',
-        title: 'Sayi ve Sayma Ormani',
+        title: 'Sayı ve Sayma Ormanı',
         icon: '🔢',
         color: '#4D96FF',
-        desc: 'Agactaki sevimli meyveleri say ve sayilari oren!',
-        maarifArea: 'Matematiksel Dusunme & Sayi Algisi',
+        desc: 'Ağaçtaki sevimli meyveleri say ve sayıları öğren!',
+        maarifArea: 'Matematiksel Düşünme & Sayı Algısı',
         levels: {
             '3-4': [
-                { instruction: 'Agacta kac tane elma var? Say ve dogru sayiyi sec!', itemEmoji: '🍎', count: 3, options: [3, 1, 2] },
-                { instruction: 'Kac tane sevimli tavsan var?', itemEmoji: '🐰', count: 2, options: [2, 4, 1] },
-                { instruction: 'Goldeki ordekleri say!', itemEmoji: '🦆', count: 4, options: [4, 2, 5] }
+                { instruction: 'Ağaçta kaç tane elma var? Say ve doğru sayıyı seç!', itemEmoji: '🍎', count: 3, options: [3, 1, 2] },
+                { instruction: 'Kaç tane sevimli tavşan var?', itemEmoji: '🐰', count: 2, options: [2, 4, 1] },
+                { instruction: 'Göldeki ördekleri say!', itemEmoji: '🦆', count: 4, options: [4, 2, 5] }
             ],
             '4-5': [
-                { instruction: 'Bahcedeki sevimli cilekleri say!', itemEmoji: '🍓', count: 6, options: [6, 4, 7, 5] },
-                { instruction: 'Ucan kelebekleri say!', itemEmoji: '🦋', count: 8, options: [8, 6, 9, 7] },
-                { instruction: 'Agactaki sari muzlari say!', itemEmoji: '🍌', count: 5, options: [5, 3, 6, 4] }
+                { instruction: 'Bahçedeki sevimli çilekleri say!', itemEmoji: '🍓', count: 6, options: [6, 4, 7, 5] },
+                { instruction: 'Uçan kelebekleri say!', itemEmoji: '🦋', count: 8, options: [8, 6, 9, 7] },
+                { instruction: 'Ağaçtaki sarı muzları say!', itemEmoji: '🍌', count: 5, options: [5, 3, 6, 4] }
             ],
             '5-6': [
-                { instruction: 'Gokyuzundeki parlayan yildizlari say!', itemEmoji: '⭐', count: 12, options: [12, 10, 14, 11] },
-                { instruction: 'Cicek toplayan arilari say!', itemEmoji: '🐝', count: 9, options: [9, 8, 10, 7] },
-                { instruction: 'Renkli balonlari say!', itemEmoji: '🎈', count: 15, options: [15, 12, 16, 13] }
+                { instruction: 'Gökyüzündeki parlayan yıldızları say!', itemEmoji: '⭐', count: 12, options: [12, 10, 14, 11] },
+                { instruction: 'Çiçek toplayan arıları say!', itemEmoji: '🐝', count: 9, options: [9, 8, 10, 7] },
+                { instruction: 'Renkli balonları say!', itemEmoji: '🎈', count: 15, options: [15, 12, 16, 13] }
             ]
         }
     },
 
-    // 3. ZIT VE MEKANSAL KAVRAMLAR
+    // 3. ZIT VE MEKÂNSAL KAVRAMLAR
     concepts: {
         id: 'concepts',
-        title: 'Zit ve Mekan Kavramlari',
+        title: 'Zıt ve Mekân Kavramları',
         icon: '↔️',
         color: '#6BCB77',
-        desc: 'Buyuk-kucuk, sicak-soguk ve nerede oldugunu kesfet!',
-        maarifArea: 'Bilissel & Dil Becerileri (Kavramsal Gelisim)',
+        desc: 'Büyük-küçük, sıcak-soğuk ve nerede olduğunu keşfet!',
+        maarifArea: 'Bilişsel & Dil Becerileri (Kavramsal Gelişim)',
         levels: {
             '3-4': [
                 {
-                    instruction: 'BUYUK olan fili sec!',
+                    instruction: 'BÜYÜK olan fili seç!',
                     questionType: 'big_small',
                     options: [
-                        { id: 1, name: 'Buyuk Fil', emoji: '🐘', size: 'big', isCorrect: true },
-                        { id: 2, name: 'Kucuk Karinca', emoji: '🐜', size: 'small', isCorrect: false }
+                        { id: 1, name: 'Büyük Fil', emoji: '🐘', size: 'big', isCorrect: true },
+                        { id: 2, name: 'Küçük Karınca', emoji: '🐜', size: 'small', isCorrect: false }
                     ]
                 },
                 {
                     instruction: 'SICAK olan nesneyi bul!',
                     questionType: 'hot_cold',
                     options: [
-                        { id: 1, name: 'Sicak Gunes', emoji: '☀️', trait: 'hot', isCorrect: true },
-                        { id: 2, name: 'Soguk Kardan Adam', emoji: '⛄', trait: 'cold', isCorrect: false }
+                        { id: 1, name: 'Sıcak Güneş', emoji: '☀️', trait: 'hot', isCorrect: true },
+                        { id: 2, name: 'Soğuk Kardan Adam', emoji: '⛄', trait: 'cold', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'GUNDUZ gokyuzunu sec!',
+                    instruction: 'GÜNDÜZ gökyüzünü seç!',
                     questionType: 'day_night',
                     options: [
-                        { id: 1, name: 'Gunduz (Gunes)', emoji: '🌞', trait: 'day', isCorrect: true },
-                        { id: 2, name: 'Gece (Ay ve Yildizlar)', emoji: '🌙', trait: 'night', isCorrect: false }
+                        { id: 1, name: 'Gündüz (Güneş)', emoji: '🌞', trait: 'day', isCorrect: true },
+                        { id: 2, name: 'Gece (Ay ve Yıldızlar)', emoji: '🌙', trait: 'night', isCorrect: false }
                     ]
                 }
             ],
             '4-5': [
                 {
-                    instruction: 'Kutunun ICINDE olan kediyi sec!',
+                    instruction: 'Kutunun İÇİNDE olan kediyi seç!',
                     questionType: 'spatial',
                     options: [
-                        { id: 1, name: 'Kutunun Icinde Kedi', emoji: '📦🐱', trait: 'inside', isCorrect: true },
-                        { id: 2, name: 'Kutunun Disinda Kedi', emoji: '🐱 📦', trait: 'outside', isCorrect: false }
+                        { id: 1, name: 'Kutunun İçinde Kedi', emoji: '📦🐱', trait: 'inside', isCorrect: true },
+                        { id: 2, name: 'Kutunun Dışında Kedi', emoji: '🐱 📦', trait: 'outside', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'AGIR olan nesneyi sec!',
+                    instruction: 'AĞIR olan nesneyi seç!',
                     questionType: 'heavy_light',
                     options: [
-                        { id: 1, name: 'Agir Kamyon', emoji: '🚚', trait: 'heavy', isCorrect: true },
-                        { id: 2, name: 'Hafif Tuy', emoji: '🪶', trait: 'light', isCorrect: false }
+                        { id: 1, name: 'Ağır Kamyon', emoji: '🚚', trait: 'heavy', isCorrect: true },
+                        { id: 2, name: 'Hafif Tüy', emoji: '🪶', trait: 'light', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'UZUN olan zurafayi sec!',
+                    instruction: 'UZUN olan zürafayı seç!',
                     questionType: 'long_short',
                     options: [
-                        { id: 1, name: 'Uzun Zurafa', emoji: '🦒', trait: 'tall', isCorrect: true },
-                        { id: 2, name: 'Kisa Kirpi', emoji: '🦔', trait: 'short', isCorrect: false }
+                        { id: 1, name: 'Uzun Zürafa', emoji: '🦒', trait: 'tall', isCorrect: true },
+                        { id: 2, name: 'Kısa Kirpi', emoji: '🦔', trait: 'short', isCorrect: false }
                     ]
                 }
             ],
             '5-6': [
                 {
-                    instruction: 'Masanin USTUNDE olan elmay sec!',
+                    instruction: 'Masanın ÜSTÜNDE olan elmayı seç!',
                     questionType: 'spatial_advanced',
                     options: [
-                        { id: 1, name: 'Masanin Ustunde', visual: 'top', text: 'Masanin Ustunde', isCorrect: true, emoji: '🍏⬆️' },
-                        { id: 2, name: 'Masanin Altinda', visual: 'bottom', text: 'Masanin Altinda', isCorrect: false, emoji: '🍏⬇️' }
+                        { id: 1, name: 'Masanın Üstünde', visual: 'top', text: 'Masanın Üstünde', isCorrect: true, emoji: '🍏⬆️' },
+                        { id: 2, name: 'Masanın Altında', visual: 'bottom', text: 'Masanın Altında', isCorrect: false, emoji: '🍏⬇️' }
                     ]
                 },
                 {
-                    instruction: 'HIZLI olan tasiti sec!',
+                    instruction: 'HIZLI olan taşıtı seç!',
                     questionType: 'fast_slow',
                     options: [
-                        { id: 1, name: 'Hizli Ucak', emoji: '✈️', trait: 'fast', isCorrect: true },
-                        { id: 2, name: 'Yavas Kaplumbaga', emoji: '🐢', trait: 'slow', isCorrect: false }
+                        { id: 1, name: 'Hızlı Uçak', emoji: '✈️', trait: 'fast', isCorrect: true },
+                        { id: 2, name: 'Yavaş Kaplumbağa', emoji: '🐢', trait: 'slow', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'ACIK olan kapiyi bul!',
+                    instruction: 'AÇIK olan kapıyı bul!',
                     questionType: 'open_close',
                     options: [
-                        { id: 1, name: 'Acik Kapi', emoji: '🚪🔓', trait: 'open', isCorrect: true },
-                        { id: 2, name: 'Kapali Kilitli Kapi', emoji: '🔒🚪', trait: 'closed', isCorrect: false }
+                        { id: 1, name: 'Açık Kapı', emoji: '🚪🔓', trait: 'open', isCorrect: true },
+                        { id: 2, name: 'Kapalı Kilitli Kapı', emoji: '🔒🚪', trait: 'closed', isCorrect: false }
                     ]
                 }
             ]
         }
     },
 
-    // 4. DOGA, CEVRE & SIFIR ATIK KASIFI
+    // 4. DOĞA, ÇEVRE & SIFIR ATIK KÂŞİFİ
     nature: {
         id: 'nature',
-        title: 'Doga & Sifir Atik Kasifi',
+        title: 'Doğa & Sıfır Atık Kâşifi',
         icon: '🌿',
         color: '#2EC4B6',
-        desc: 'Canlilarin yuvalarini ve cevremizi korumay oren!',
-        maarifArea: 'Fen ve Doga Becerileri & Cevre Duyarliligi',
+        desc: 'Canlıların yuvalarını ve çevremizi korumayı öğren!',
+        maarifArea: 'Fen ve Doğa Becerileri & Çevre Duyarlılığı',
         levels: {
             '3-4': [
                 {
                     type: 'habitat',
-                    instruction: 'Balik nerede yasar?',
+                    instruction: 'Balık nerede yaşar?',
                     animalEmoji: '🐠',
-                    animalName: 'Balik',
+                    animalName: 'Balık',
                     options: [
                         { id: 1, name: 'Deniz / Su', emoji: '🌊', isCorrect: true },
-                        { id: 2, name: 'Agac Dali', emoji: '🌳', isCorrect: false }
+                        { id: 2, name: 'Ağaç Dalı', emoji: '🌳', isCorrect: false }
                     ]
                 },
                 {
                     type: 'habitat',
-                    instruction: 'Kus nerede yasar ve ucar?',
+                    instruction: 'Kuş nerede yaşar ve uçar?',
                     animalEmoji: '🐦',
-                    animalName: 'Kus',
+                    animalName: 'Kuş',
                     options: [
-                        { id: 1, name: 'Agac & Gokyuzu', emoji: '🌲🌤️', isCorrect: true },
+                        { id: 1, name: 'Ağaç & Gökyüzü', emoji: '🌲🌤️', isCorrect: true },
                         { id: 2, name: 'Denizin Dibi', emoji: '🌊', isCorrect: false }
                     ]
                 },
                 {
                     type: 'care',
-                    instruction: 'Cicegin buyumesi icin hangisine ihtiyaci vardir?',
-                    target: 'Cicek',
+                    instruction: 'Çiçeğin büyümesi için hangisine ihtiyacı vardır?',
+                    target: 'Çiçek',
                     targetEmoji: '🌱',
                     options: [
-                        { id: 1, name: 'Su ve Gunes', emoji: '💧☀️', isCorrect: true },
+                        { id: 1, name: 'Su ve Güneş', emoji: '💧☀️', isCorrect: true },
                         { id: 2, name: 'Dondurma', emoji: '🍦', isCorrect: false }
                     ]
                 }
@@ -286,65 +286,65 @@ window.MAARIF_DATA = {
             '4-5': [
                 {
                     type: 'recycle',
-                    instruction: 'Plastik siseyi hangi geri donusum kutusuna atmaliyiz?',
+                    instruction: 'Plastik şişeyi hangi geri dönüşüm kutusuna atmalıyız?',
                     wasteEmoji: '🧴',
-                    wasteName: 'Plastik Sise',
+                    wasteName: 'Plastik Şişe',
                     options: [
-                        { id: 1, name: 'Plastik Kutusu', binColor: '#FFD93D', emoji: '🟡 PLASTiK', isCorrect: true },
+                        { id: 1, name: 'Plastik Kutusu', binColor: '#FFD93D', emoji: '🟡 PLASTİK', isCorrect: true },
                         { id: 2, name: 'Cam Kutusu', binColor: '#6BCB77', emoji: '🟢 CAM', isCorrect: false },
-                        { id: 3, name: 'Kagit Kutusu', binColor: '#4D96FF', emoji: '🔵 KAGIT', isCorrect: false }
+                        { id: 3, name: 'Kâğıt Kutusu', binColor: '#4D96FF', emoji: '🔵 KÂĞIT', isCorrect: false }
                     ]
                 },
                 {
                     type: 'recycle',
-                    instruction: 'Eski gazete ve defteri hangi kutuya atmaliyiz?',
+                    instruction: 'Eski gazete ve defteri hangi kutuya atmalıyız?',
                     wasteEmoji: '📰',
-                    wasteName: 'Kagit & Gazete',
+                    wasteName: 'Kâğıt & Gazete',
                     options: [
-                        { id: 1, name: 'Kagit Kutusu', binColor: '#4D96FF', emoji: '🔵 KAGIT', isCorrect: true },
-                        { id: 2, name: 'Plastik Kutusu', binColor: '#FFD93D', emoji: '🟡 PLASTiK', isCorrect: false },
+                        { id: 1, name: 'Kâğıt Kutusu', binColor: '#4D96FF', emoji: '🔵 KÂĞIT', isCorrect: true },
+                        { id: 2, name: 'Plastik Kutusu', binColor: '#FFD93D', emoji: '🟡 PLASTİK', isCorrect: false },
                         { id: 3, name: 'Cam Kutusu', binColor: '#6BCB77', emoji: '🟢 CAM', isCorrect: false }
                     ]
                 },
                 {
                     type: 'living_nonliving',
-                    instruction: 'Hangisi CANLI bir varliektir?',
+                    instruction: 'Hangisi CANLI bir varlıktır?',
                     options: [
                         { id: 1, name: 'Kedi', emoji: '🐱', isCorrect: true },
                         { id: 2, name: 'Oyuncak Araba', emoji: '🚗', isCorrect: false },
-                        { id: 3, name: 'Tas', emoji: '🪨', isCorrect: false }
+                        { id: 3, name: 'Taş', emoji: '🪨', isCorrect: false }
                     ]
                 }
             ],
             '5-6': [
                 {
                     type: 'recycle',
-                    instruction: 'Cam kavanozu hangi geri donusum kutusuna atmaliyiz?',
+                    instruction: 'Cam kavanozu hangi geri dönüşüm kutusuna atmalıyız?',
                     wasteEmoji: '🫙',
                     wasteName: 'Cam Kavanoz',
                     options: [
-                        { id: 1, name: 'Yesil Cam Kutusu', binColor: '#6BCB77', emoji: '🟢 CAM', isCorrect: true },
-                        { id: 2, name: 'Mavi Kagit Kutusu', binColor: '#4D96FF', emoji: '🔵 KAGIT', isCorrect: false },
-                        { id: 3, name: 'Sari Plastik Kutusu', binColor: '#FFD93D', emoji: '🟡 PLASTiK', isCorrect: false }
+                        { id: 1, name: 'Yeşil Cam Kutusu', binColor: '#6BCB77', emoji: '🟢 CAM', isCorrect: true },
+                        { id: 2, name: 'Mavi Kâğıt Kutusu', binColor: '#4D96FF', emoji: '🔵 KÂĞIT', isCorrect: false },
+                        { id: 3, name: 'Sarı Plastik Kutusu', binColor: '#FFD93D', emoji: '🟡 PLASTİK', isCorrect: false }
                     ]
                 },
                 {
                     type: 'nature_care',
-                    instruction: 'Temiz bir cevre icin hangisini yapmaliyiz?',
+                    instruction: 'Temiz bir çevre için hangisini yapmalıyız?',
                     options: [
-                        { id: 1, name: 'Copleri Cop Kutusuna Atmak', emoji: '🗑️✨', isCorrect: true },
-                        { id: 2, name: 'Copleri Yere Atmak', emoji: '🚮❌', isCorrect: false },
-                        { id: 3, name: 'Suyu Bosa Akitmak', emoji: '🚰❌', isCorrect: false }
+                        { id: 1, name: 'Çöpleri Çöp Kutusuna Atmak', emoji: '🗑️✨', isCorrect: true },
+                        { id: 2, name: 'Çöpleri Yere Atmak', emoji: '🚮❌', isCorrect: false },
+                        { id: 3, name: 'Suyu Boşa Akıtmak', emoji: '🚰❌', isCorrect: false }
                     ]
                 },
                 {
                     type: 'habitat_advanced',
-                    instruction: 'Kutup Ayisi nerede yasar?',
+                    instruction: 'Kutup Ayısı nerede yaşar?',
                     animalEmoji: '🐻‍❄️',
-                    animalName: 'Kutup Ayisi',
+                    animalName: 'Kutup Ayısı',
                     options: [
-                        { id: 1, name: 'Karli Buzlu Kutup', emoji: '❄️🏔️', isCorrect: true },
-                        { id: 2, name: 'Sicak Col', emoji: '🏜️☀️', isCorrect: false },
+                        { id: 1, name: 'Karlı Buzlu Kutup', emoji: '❄️🏔️', isCorrect: true },
+                        { id: 2, name: 'Sıcak Çöl', emoji: '🏜️☀️', isCorrect: false },
                         { id: 3, name: 'Derin Okyanus Dibi', emoji: '🌊🐠', isCorrect: false }
                     ]
                 }
@@ -352,127 +352,127 @@ window.MAARIF_DATA = {
         }
     },
 
-    // 5. DUYGULAR VE NEZAKET ATOLYESI
+    // 5. DUYGULAR VE NEZAKET ATÖLYESİ
     emotions: {
         id: 'emotions',
-        title: 'Duygular ve Degerler Kulubu',
+        title: 'Duygular ve Değerler Kulübü',
         icon: '💖',
         color: '#FF9F45',
-        desc: 'Duygularimizi taniyalim, paylasmay ve nezaketi orenelim!',
-        maarifArea: 'Sosyo-Duygusal Beceriler & Degerler Egitimi',
+        desc: 'Duygularımızı tanıyalım, paylaşmayı ve nezaketi öğrenelim!',
+        maarifArea: 'Sosyo-Duygusal Beceriler & Değerler Eğitimi',
         levels: {
             '3-4': [
                 {
-                    instruction: 'MUTLU olan yuzu bul!',
+                    instruction: 'MUTLU olan yüzü bul!',
                     targetEmotion: 'Mutlu',
                     options: [
-                        { id: 1, name: 'Mutlu Yuz', emoji: '😄', emotion: 'happy', isCorrect: true },
-                        { id: 2, name: 'Uzgun Yuz', emoji: '😢', emotion: 'sad', isCorrect: false }
+                        { id: 1, name: 'Mutlu Yüz', emoji: '😄', emotion: 'happy', isCorrect: true },
+                        { id: 2, name: 'Üzgün Yüz', emoji: '😢', emotion: 'sad', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'UZGUN olan yuzu bul!',
-                    targetEmotion: 'Uzgun',
+                    instruction: 'ÜZGÜN olan yüzü bul!',
+                    targetEmotion: 'Üzgün',
                     options: [
-                        { id: 1, name: 'Uzgun Yuz', emoji: '😢', emotion: 'sad', isCorrect: true },
-                        { id: 2, name: 'Mutlu Yuz', emoji: '😄', emotion: 'happy', isCorrect: false }
+                        { id: 1, name: 'Üzgün Yüz', emoji: '😢', emotion: 'sad', isCorrect: true },
+                        { id: 2, name: 'Mutlu Yüz', emoji: '😄', emotion: 'happy', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'SASIRMIS olan yuzu sec!',
-                    targetEmotion: 'Saskin',
+                    instruction: 'ŞAŞIRMIŞ olan yüzü seç!',
+                    targetEmotion: 'Şaşkın',
                     options: [
-                        { id: 1, name: 'Saskin Yuz', emoji: '😲', emotion: 'surprised', isCorrect: true },
-                        { id: 2, name: 'Uykulu Yuz', emoji: '😴', emotion: 'sleepy', isCorrect: false }
+                        { id: 1, name: 'Şaşkın Yüz', emoji: '😲', emotion: 'surprised', isCorrect: true },
+                        { id: 2, name: 'Uykulu Yüz', emoji: '😴', emotion: 'sleepy', isCorrect: false }
                     ]
                 }
             ],
             '4-5': [
                 {
-                    instruction: 'Biri bize hediye verdiginde ne soleriz?',
-                    scenario: 'Arkadasin sana guzel bir oyuncak hediye etti 🎁',
+                    instruction: 'Biri bize hediye verdiğinde ne söyleriz?',
+                    scenario: 'Arkadaşın sana güzel bir oyuncak hediye etti 🎁',
                     options: [
-                        { id: 1, name: 'Tesekkur Ederim', emoji: '🙏 "Tesekkur Ederim"', isCorrect: true },
+                        { id: 1, name: 'Teşekkür Ederim', emoji: '🙏 "Teşekkür Ederim"', isCorrect: true },
                         { id: 2, name: 'Bana Ne', emoji: '🙅 "Bana Ne"', isCorrect: false },
-                        { id: 3, name: 'Kizgin Bakmak', emoji: '😠', isCorrect: false }
+                        { id: 3, name: 'Kızgın Bakmak', emoji: '😠', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'Arkadasimizin canini yanlislikla acittigimizda ne soleriz?',
-                    scenario: 'Yanlislikla arkadasina carptin...',
+                    instruction: 'Arkadaşımızın canını yanlışlıkla acıttığımızda ne söyleriz?',
+                    scenario: 'Yanlışlıkla arkadaşına çarptın...',
                     options: [
-                        { id: 1, name: 'Ozur Dilerim', emoji: '🤝 "Ozur Dilerim"', isCorrect: true },
-                        { id: 2, name: 'Gulup Kacmak', emoji: '🏃💨', isCorrect: false },
-                        { id: 3, name: 'Kizmak', emoji: '😡', isCorrect: false }
+                        { id: 1, name: 'Özür Dilerim', emoji: '🤝 "Özür Dilerim"', isCorrect: true },
+                        { id: 2, name: 'Gülüp Kaçmak', emoji: '🏃💨', isCorrect: false },
+                        { id: 3, name: 'Kızmak', emoji: '😡', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'KIZGIN olan yuz ifadesini bul!',
-                    targetEmotion: 'Kizgin',
+                    instruction: 'KIZGIN olan yüz ifadesini bul!',
+                    targetEmotion: 'Kızgın',
                     options: [
-                        { id: 1, name: 'Kizgin Yuz', emoji: '😠', emotion: 'angry', isCorrect: true },
-                        { id: 2, name: 'Mutlu Yuz', emoji: '😊', emotion: 'happy', isCorrect: false },
-                        { id: 3, name: 'Sakin Yuz', emoji: '😌', emotion: 'calm', isCorrect: false }
+                        { id: 1, name: 'Kızgın Yüz', emoji: '😠', emotion: 'angry', isCorrect: true },
+                        { id: 2, name: 'Mutlu Yüz', emoji: '😊', emotion: 'happy', isCorrect: false },
+                        { id: 3, name: 'Sakin Yüz', emoji: '😌', emotion: 'calm', isCorrect: false }
                     ]
                 }
             ],
             '5-6': [
                 {
-                    instruction: 'Birinden bir sey isterken hangi nezaket sozcugunu kullaniriz?',
-                    scenario: 'Kalemi odunc almak istiyorsun...',
+                    instruction: 'Birinden bir şey isterken hangi nezaket sözcüğünü kullanırız?',
+                    scenario: 'Kalemi ödünç almak istiyorsun...',
                     options: [
-                        { id: 1, name: 'Lutfen verebilir misin?', emoji: '✨ "Lutfen"', isCorrect: true },
+                        { id: 1, name: 'Lütfen verebilir misin?', emoji: '✨ "Lütfen"', isCorrect: true },
                         { id: 2, name: 'Hemen ver bana!', emoji: '⚡ "Ver hemen"', isCorrect: false },
-                        { id: 3, name: 'Cekip almak', emoji: '✋❌', isCorrect: false }
+                        { id: 3, name: 'Çekip almak', emoji: '✋❌', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'Arkadasin oyuncagini bulamayin uzulmus. Ne yapmalsin?',
-                    scenario: 'Uzgun arkadasina yardim etmek...',
+                    instruction: 'Arkadaşın oyuncağını bulamayıp üzülmüş. Ne yapmalısın?',
+                    scenario: 'Üzgün arkadaşına yardım etmek...',
                     options: [
-                        { id: 1, name: 'Yardim edip birlikte aramak', emoji: '🤗 Birlikte Arayalim', isCorrect: true },
-                        { id: 2, name: 'Gormezden gelmek', emoji: '🙈 Umursamamak', isCorrect: false },
-                        { id: 3, name: 'Ona gulme', emoji: '😆 Dalga Gecmek', isCorrect: false }
+                        { id: 1, name: 'Yardım edip birlikte aramak', emoji: '🤗 Birlikte Arayalım', isCorrect: true },
+                        { id: 2, name: 'Görmezden gelmek', emoji: '🙈 Umursamamak', isCorrect: false },
+                        { id: 3, name: 'Ona gülmek', emoji: '😆 Dalga Geçmek', isCorrect: false }
                     ]
                 },
                 {
-                    instruction: 'Oyuncagini arkadasinla PAYLASMAK sence nasil bir davranistir?',
-                    scenario: 'Birlikte legolarla kule yapiyorsunuz 🏰',
+                    instruction: 'Oyuncağını arkadaşınla PAYLAŞMAK sence nasıl bir davranıştır?',
+                    scenario: 'Birlikte legolarla kule yapıyorsunuz 🏰',
                     options: [
-                        { id: 1, name: 'Harika ve Guzel Bir Davranis', emoji: '🌟 Cok Guzel', isCorrect: true },
-                        { id: 2, name: 'Kotu Bir Davranis', emoji: '👎 Kotu', isCorrect: false }
+                        { id: 1, name: 'Harika ve Güzel Bir Davranış', emoji: '🌟 Çok Güzel', isCorrect: true },
+                        { id: 2, name: 'Kötü Bir Davranış', emoji: '👎 Kötü', isCorrect: false }
                     ]
                 }
             ]
         }
     },
 
-    // 6. SIHIRLI ORUNTU TRENI
+    // 6. SİHİRLİ ÖRÜNTÜ TRENİ
     pattern: {
         id: 'pattern',
-        title: 'Sihirli Oruntu Treni',
+        title: 'Sihirli Örüntü Treni',
         icon: '🚂',
         color: '#9B51E0',
-        desc: 'Vagonlardaki sirayi takip et, eksik sekli veya meyveyi bul!',
-        maarifArea: 'Algoritmik & Mantiksal Dusunme Becerileri',
+        desc: 'Vagonlardaki sırayı takip et, eksik şekli veya meyveyi bul!',
+        maarifArea: 'Algoritmik & Mantıksal Düşünme Becerileri',
         levels: {
             '3-4': [
                 {
-                    instruction: 'Siradaki meyveyi bulup vagona yerleistir!',
+                    instruction: 'Sıradaki meyveyi bulup vagona yerleştir!',
                     sequence: ['🍎', '🍌', '🍎', '🍌', '🍎'],
                     patternDisplay: ['🍎', '🍌', '🍎', '🍌', '🍎', '❓'],
                     correctItem: '🍌',
                     options: ['🍌', '🍎', '🍇']
                 },
                 {
-                    instruction: 'Sirada hangi renk top var?',
+                    instruction: 'Sırada hangi renk top var?',
                     sequence: ['🔴', '🔵', '🔴', '🔵'],
                     patternDisplay: ['🔴', '🔵', '🔴', '🔵', '❓'],
                     correctItem: '🔴',
                     options: ['🔴', '🔵', '🟡']
                 },
                 {
-                    instruction: 'Siradaki sevimli hayvani bul!',
+                    instruction: 'Sıradaki sevimli hayvanı bul!',
                     sequence: ['🐱', '🐶', '🐱', '🐶'],
                     patternDisplay: ['🐱', '🐶', '🐱', '🐶', '❓'],
                     correctItem: '🐱',
@@ -481,21 +481,21 @@ window.MAARIF_DATA = {
             ],
             '4-5': [
                 {
-                    instruction: 'Sirada hangi sekil gelmeli?',
+                    instruction: 'Sırada hangi şekil gelmeli?',
                     sequence: ['🔺', '🟨', '🔺', '🟨', '🔺'],
                     patternDisplay: ['🔺', '🟨', '🔺', '🟨', '🔺', '❓'],
                     correctItem: '🟨',
                     options: ['🟨', '🔺', '🔵', '⭐']
                 },
                 {
-                    instruction: 'Oruntu tamamla: Elma - Cilek - Elma - Cilek - ?',
+                    instruction: 'Örüntüyü tamamla: Elma - Çilek - Elma - Çilek - ?',
                     sequence: ['🍎', '🍓', '🍎', '🍓'],
                     patternDisplay: ['🍎', '🍓', '🍎', '🍓', '❓'],
                     correctItem: '🍎',
                     options: ['🍎', '🍓', '🍍', '🍉']
                 },
                 {
-                    instruction: 'Gunes - Ay - Gunes - Ay - ? Sirada hangisi var?',
+                    instruction: 'Güneş - Ay - Güneş - Ay - ? Sırada hangisi var?',
                     sequence: ['☀️', '🌙', '☀️', '🌙'],
                     patternDisplay: ['☀️', '🌙', '☀️', '🌙', '❓'],
                     correctItem: '☀️',
@@ -504,21 +504,21 @@ window.MAARIF_DATA = {
             ],
             '5-6': [
                 {
-                    instruction: 'Karmasi orontu: Yildiz - Kalp - Daire - Yildiz - Kalp - ?',
+                    instruction: 'Karmaşık örüntüyü tamamla: Yıldız - Kalp - Daire - Yıldız - Kalp - ?',
                     sequence: ['⭐', '💖', '🟢', '⭐', '💖'],
                     patternDisplay: ['⭐', '💖', '🟢', '⭐', '💖', '❓'],
                     correctItem: '🟢',
                     options: ['🟢', '⭐', '💖', '🔷']
                 },
                 {
-                    instruction: 'Ikili orontu: 2 Elma, 2 Muz, 2 Elma, 1 Muz...',
+                    instruction: 'İkili örüntü: 2 Elma, 2 Muz, 2 Elma, 1 Muz...',
                     sequence: ['🍎', '🍎', '🍌', '🍌', '🍎', '🍎', '🍌'],
                     patternDisplay: ['🍎', '🍎', '🍌', '🍌', '🍎', '🍎', '🍌', '❓'],
                     correctItem: '🍌',
                     options: ['🍌', '🍎', '🍇', '🍒']
                 },
                 {
-                    instruction: 'Kare - Ucgen - Daire - Kare - Ucgen - ?',
+                    instruction: 'Kare - Üçgen - Daire - Kare - Üçgen - ?',
                     sequence: ['🟦', '🔺', '🟡', '🟦', '🔺'],
                     patternDisplay: ['🟦', '🔺', '🟡', '🟦', '🔺', '❓'],
                     correctItem: '🟡',
@@ -528,24 +528,24 @@ window.MAARIF_DATA = {
         }
     },
 
-    // 7. MANGALA - CUKUR TAS STRATEJI OYUNU
+    // 7. MANGALA - ÇUKUR TAŞ STRATEJİ OYUNU
     mangala: {
         id: 'mangala',
-        title: 'Mangala - Tas Kale Oyunu',
+        title: 'Mangala - Taş Kale Oyunu',
         icon: '🪨',
         color: '#B45309',
-        desc: 'Taslari dogru kalelere gondererek strateji kur!',
-        maarifArea: 'Stratejik Dusunme & Siniflandirma Becerileri'
+        desc: 'Taşları doğru kalelere göndererek strateji kur!',
+        maarifArea: 'Stratejik Düşünme & Sınıflandırma Becerileri'
     },
 
-    // 8. TANGRAM - RENKLI PARCA YERLISTIRME
+    // 8. TANGRAM - RENKLİ PARÇA YERLEŞTİRME
     tangram: {
         id: 'tangram',
-        title: 'Tangram - Sekil Ustasi',
+        title: 'Tangram - Şekil Ustası',
         icon: '🧩',
         color: '#2563EB',
-        desc: 'Renkli parcalari dogru yere yerlistirerek sekil olustur!',
-        maarifArea: 'Uzaysal Dusunme & Geometri Becerileri'
+        desc: 'Renkli parçaları doğru yere yerleştirerek şekil oluştur!',
+        maarifArea: 'Uzaysal Düşünme & Geometri Becerileri'
     },
 
     // 9. EMOJI SU DOKU (SUDOKU)
@@ -554,8 +554,8 @@ window.MAARIF_DATA = {
         title: 'Emoji Su Doku',
         icon: '🧠',
         color: '#059669',
-        desc: 'Her sira ve sutuna dogru emojiyi yerlistir!',
-        maarifArea: 'Mantiksal Cikari & Elestirel Dusunme Becerileri'
+        desc: 'Her sıra ve sütuna doğru emojiyi yerleştir!',
+        maarifArea: 'Mantıksal Çıkarım & Eleştirel Düşünme Becerileri'
     },
 
     // 10. ÜNLÜ HARFLER KÂŞİFİ (a, e, ı, i, o, ö, u, ü)
@@ -712,52 +712,52 @@ window.MAARIF_DATA = {
     }
 };
 
-// Maarif Modeli Kazanim Alanlari (Ebeveyn ve Ogretmen Paneli icin)
+// Maarif Modeli Kazanım Alanları (Ebeveyn ve Öğretmen Paneli için)
 window.MAARIF_OUTCOMES = {
-    'Bilissel & Sanatsal Beceriler': {
+    'Bilişsel & Sanatsal Beceriler': {
         icon: '🎨',
         color: '#FF6B6B',
-        desc: 'Geometrik sekilleri tanima, adlandirma, ana ve ara renkleri ayirt etme ve estetik farkindalik.'
+        desc: 'Geometrik şekilleri tanıma, adlandırma, ana ve ara renkleri ayırt etme ve estetik farkındalık.'
     },
-    'Matematiksel Dusunme & Sayi Algisi': {
+    'Matematiksel Düşünme & Sayı Algısı': {
         icon: '🔢',
         color: '#4D96FF',
-        desc: 'Birebir esleme, 1-20 arasi nesne sayma, nicelik-sayi iliskisi kurma ve temel matematiksel akil yurutme.'
+        desc: 'Birebir eşleme, 1-20 arası nesne sayma, nicelik-sayı ilişkisi kurma ve temel matematiksel akıl yürütme.'
     },
-    'Bilissel & Dil Becerileri (Kavramsal Gelisim)': {
+    'Bilişsel & Dil Becerileri (Kavramsal Gelişim)': {
         icon: '↔️',
         color: '#6BCB77',
-        desc: 'Zit kavramlari (buyuk/kucuk, sicak/soguk) kavrama, mekanda konum belirleme (icinde/disinda, ustunde/altinda).'
+        desc: 'Zıt kavramları (büyük/küçük, sıcak/soğuk) kavrama, mekânda konum belirleme (içinde/dışında, üstünde/altında).'
     },
-    'Fen ve Doga Becerileri & Cevre Duyarliligi': {
+    'Fen ve Doğa Becerileri & Çevre Duyarlılığı': {
         icon: '🌿',
         color: '#2EC4B6',
-        desc: 'Canli ve cansiz varliklari ayirt etme, yasam alanlarini tanima, geri dorusum ve cevre bilinci gelistirme.'
+        desc: 'Canlı ve cansız varlıkları ayırt etme, yaşam alanlarını tanıma, geri dönüşüm ve çevre bilinci geliştirme.'
     },
-    'Sosyo-Duygusal Beceriler & Degerler Egitimi': {
+    'Sosyo-Duygusal Beceriler & Değerler Eğitimi': {
         icon: '💖',
         color: '#FF9F45',
-        desc: 'Temel duygulari tanima ve ifade etme, empati kurma, nezaket kurallarina uyma ve paylasma degerini benimseme.'
+        desc: 'Temel duyguları tanıma ve ifade etme, empati kurma, nezaket kurallarına uyma ve paylaşma değerini benimseme.'
     },
-    'Algoritmik & Mantiksal Dusunme Becerileri': {
+    'Algoritmik & Mantıksal Düşünme Becerileri': {
         icon: '🚂',
         color: '#9B51E0',
-        desc: 'Nesneler arasi duzeni kesfetme, basit ve karmasi orontuler tamamlama ve mantiksal siralama yapma.'
+        desc: 'Nesneler arası düzeni keşfetme, basit ve karmaşık örüntüleri tamamlama ve mantıksal sıralama yapma.'
     },
-    'Stratejik Dusunme & Siniflandirma Becerileri': {
+    'Stratejik Düşünme & Sınıflandırma Becerileri': {
         icon: '🪨',
         color: '#B45309',
-        desc: 'Nesneleri ozelliklerine gore gruplama, basit strateji kurma ve iki adimli cikari yapma.'
+        desc: 'Nesneleri özelliklerine göre gruplama, basit strateji kurma ve iki adımlı çıkarım yapma.'
     },
-    'Uzaysal Dusunme & Geometri Becerileri': {
+    'Uzaysal Düşünme & Geometri Becerileri': {
         icon: '🧩',
         color: '#2563EB',
-        desc: 'Sekillerin uzaydaki konumunu ve birbirleriyle iliskisini anlama, parca-butun iliskisi kurma.'
+        desc: 'Şekillerin uzaydaki konumunu ve birbirleriyle ilişkisini anlama, parça-bütün ilişkisi kurma.'
     },
-    'Mantiksal Cikari & Elestirel Dusunme Becerileri': {
+    'Mantıksal Çıkarım & Eleştirel Düşünme Becerileri': {
         icon: '🧠',
         color: '#059669',
-        desc: 'Kural tabanli dusunme, eliminasyon stratejisi kullanma ve cok degiskenli iliskileri cozumleme.'
+        desc: 'Kural tabanlı düşünme, eleme stratejisi kullanma ve çok değişkenli ilişkileri çözümleme.'
     },
     'Dil ve Erken Okuryazarlık Becerileri (Ses Farkındalığı)': {
         icon: '🔤',
@@ -780,4 +780,3 @@ window.MAARIF_OUTCOMES = {
         desc: 'Görsel çalışma belleğini güçlendirme, nesnelerin konumunu hatırlama, dikkat yoğunlaştırma ve eşleştirme.'
     }
 };
-

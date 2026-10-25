@@ -212,7 +212,7 @@ class MangalaGame {
         const firstStone = this.pits[pitIdx][0];
         const storeKey = this.colorMap[firstStone];
         if (storeKey) {
-            window.soundManager.speak(`Seçildi! Şimdi ${this.stores[storeKey].label.replace(/[^\w\s]/g, '').trim()} kalesine tıkla!`, true);
+            window.soundManager.speak(`Seçildi! Şimdi ${this.stores[storeKey].label} kalesine dokun!`, true);
         }
     }
 

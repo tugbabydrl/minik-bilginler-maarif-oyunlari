@@ -49,15 +49,32 @@ class SoundManager {
 
     initSpeech() {
         const setVoice = () => {
+            if (!this.speechAvailable) return;
             const voices = window.speechSynthesis.getVoices();
-            // Türkçe ses bulmaya çalış (özellikle kadın veya çocuk dostu sesler)
-            this.turkishVoice = voices.find(v => v.lang.includes('tr')) || null;
+            if (voices && voices.length > 0) {
+                // Türkçe sesleri bul (tr-TR veya tr ile başlayanlar)
+                const trVoices = voices.filter(v => v.lang && (v.lang.toLowerCase() === 'tr-tr' || v.lang.toLowerCase().startsWith('tr')));
+                // Kaliteli veya doğal Türkçe sesi seç
+                this.turkishVoice = trVoices.find(v => /yelda|tolga|emel|cem|google|natural/i.test(v.name)) || trVoices[0] || null;
+            }
         };
 
         setVoice();
         if (window.speechSynthesis.onvoiceschanged !== undefined) {
             window.speechSynthesis.onvoiceschanged = setVoice;
         }
+    }
+
+    // Metni Türkçe seslendirme için temizle (emojileri ve sembolleri Türkçe harflere dokunmadan arındırır)
+    cleanTextForSpeech(text) {
+        if (!text) return '';
+        // Emojileri ve özel sembolleri temizle (Türkçe ç, ğ, ı, ö, ş, ü harflerini korur)
+        let clean = text.replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F300}-\u{1F9FF}\u{FE00}-\u{FE0F}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{1F900}-\u{1F9FF}]/gu, '');
+        // Oyun içi oklar ve işaretleri temizle
+        clean = clean.replace(/[➔➡️⬅️⬆️⬇️👉👈👆👇✓✗✕✖⭐✨💡🔊📢🎯🔄🗑️❓]/gu, '');
+        // Fazla boşlukları düzelt
+        clean = clean.replace(/\s+/g, ' ').trim();
+        return clean;
     }
 
     toggleMute() {
@@ -68,18 +85,30 @@ class SoundManager {
         return this.isMuted;
     }
 
-    // Çocuklar için sıcak ve tane tane Türkçe sesli yönerge
+    // Çocuklar için sıcak, tane tane ve doğru Türkçe sesli yönerge
     speak(text, priority = false) {
         if (this.isMuted || !this.speechAvailable || !text) return;
+
+        // Türkçe ses henüz yüklenmediyse tekrar kontrol et
+        if (!this.turkishVoice) {
+            const voices = window.speechSynthesis.getVoices();
+            if (voices && voices.length > 0) {
+                const trVoices = voices.filter(v => v.lang && (v.lang.toLowerCase() === 'tr-tr' || v.lang.toLowerCase().startsWith('tr')));
+                this.turkishVoice = trVoices.find(v => /yelda|tolga|emel|cem|google|natural/i.test(v.name)) || trVoices[0] || null;
+            }
+        }
+
+        const cleanText = this.cleanTextForSpeech(text);
+        if (!cleanText) return;
 
         if (priority) {
             window.speechSynthesis.cancel();
         }
 
-        const utterance = new SpeechSynthesisUtterance(text);
+        const utterance = new SpeechSynthesisUtterance(cleanText);
         utterance.lang = 'tr-TR';
-        utterance.rate = 0.90; // Okul öncesi çocukların kolay anlaması için biraz yavaş
-        utterance.pitch = 1.25; // Daha neşeli ve samimi bir çocuk tonu
+        utterance.rate = 0.90; // Okul öncesi çocukların tane tane ve net anlaması için uygun hız
+        utterance.pitch = 1.15; // Sıcak ve neşeli ton
 
         if (this.turkishVoice) {
             utterance.voice = this.turkishVoice;
