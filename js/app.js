@@ -169,6 +169,9 @@ class MaarifApp {
             case 'copyModel':
                 this.activeGame = new CopyModelGame(this.gameContainer, onGameComplete, onProgress);
                 break;
+            case 'matrixCoding':
+                this.activeGame = new MatrixCodingGame(this.gameContainer, onGameComplete, onProgress);
+                break;
             default:
                 console.error('Bilinmeyen oyun:', gameKey);
                 return;

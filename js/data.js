@@ -719,6 +719,16 @@ window.MAARIF_DATA = {
         color: '#EC4899',
         desc: 'Örnek modeldeki renk ve şekillerin aynısını kendi tablona oluştur!',
         maarifArea: 'Görsel-Uzamsal Algı & Model Kopyalama'
+    },
+
+    // 15. KODLAMA ÖĞRENİYORUM (MATRİS & ŞEKİL KODLAMA)
+    matrixCoding: {
+        id: 'matrixCoding',
+        title: 'Kodlama Öğreniyorum',
+        icon: '📋',
+        color: '#0284C7',
+        desc: 'Örnek kod tablosundaki noktaları ve şekilleri kendi tablona kodla!',
+        maarifArea: 'Matris & Koordinat Kodlama'
     }
 };
 
@@ -793,5 +803,10 @@ window.MAARIF_OUTCOMES = {
         icon: '🪞',
         color: '#EC4899',
         desc: 'Görsel modelleri inceleme, uzamsal konum ilişkilerini kavrama, desen kopyalama ve el-göz koordinasyonu.'
+    },
+    'Matris & Koordinat Kodlama': {
+        icon: '📋',
+        color: '#0284C7',
+        desc: 'Tablo ve matris üzerinde satır-sütun koordinatlarını kavrama, simgesel şekilleri doğru hücrelere kodlama ve uzamsal dikkat geliştirme.'
     }
 };
